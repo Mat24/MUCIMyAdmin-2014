@@ -1,0 +1,37 @@
+<h1>Listing modulo_rols</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paciente</th>
+      <th>Institucion</th>
+      <th>Nivel grado</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Email</th>
+      <th>Observaciones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @modulo_rols.each do |modulo_rol| %>
+      <tr>
+        <td><%= modulo_rol.paciente %></td>
+        <td><%= modulo_rol.institucion %></td>
+        <td><%= modulo_rol.nivel_grado %></td>
+        <td><%= modulo_rol.direccion %></td>
+        <td><%= modulo_rol.telefono %></td>
+        <td><%= modulo_rol.email %></td>
+        <td><%= modulo_rol.observaciones %></td>
+        <td><%= link_to 'Show', modulo_rol %></td>
+        <td><%= link_to 'Edit', edit_modulo_rol_path(modulo_rol) %></td>
+        <td><%= link_to 'Destroy', modulo_rol, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Modulo rol', new_modulo_rol_path %>

@@ -1,0 +1,53 @@
+<h1>Listing modulo_receptoras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paciente</th>
+      <th>Nombre entidad</th>
+      <th>Tipo entidad</th>
+      <th>Nombre receptor</th>
+      <th>Cargo</th>
+      <th>Ciudad</th>
+      <th>Departamento</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Email</th>
+      <th>Fecha recepcion</th>
+      <th>Fecha valoracion</th>
+      <th>Fecha elaboracion</th>
+      <th>Fecha notificacion</th>
+      <th>Numero dictamen</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @modulo_receptoras.each do |modulo_receptora| %>
+      <tr>
+        <td><%= modulo_receptora.paciente %></td>
+        <td><%= modulo_receptora.nombre_entidad %></td>
+        <td><%= modulo_receptora.tipo_entidad %></td>
+        <td><%= modulo_receptora.nombre_receptor %></td>
+        <td><%= modulo_receptora.cargo %></td>
+        <td><%= modulo_receptora.ciudad %></td>
+        <td><%= modulo_receptora.departamento %></td>
+        <td><%= modulo_receptora.direccion %></td>
+        <td><%= modulo_receptora.telefono %></td>
+        <td><%= modulo_receptora.email %></td>
+        <td><%= modulo_receptora.fecha_recepcion %></td>
+        <td><%= modulo_receptora.fecha_valoracion %></td>
+        <td><%= modulo_receptora.fecha_elaboracion %></td>
+        <td><%= modulo_receptora.fecha_notificacion %></td>
+        <td><%= modulo_receptora.numero_dictamen %></td>
+        <td><%= link_to 'Show', modulo_receptora %></td>
+        <td><%= link_to 'Edit', edit_modulo_receptora_path(modulo_receptora) %></td>
+        <td><%= link_to 'Destroy', modulo_receptora, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Modulo receptora', new_modulo_receptora_path %>

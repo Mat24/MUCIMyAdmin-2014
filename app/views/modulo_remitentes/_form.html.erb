@@ -1,0 +1,79 @@
+<div class="example">
+
+  <%= form_for(@modulo_remitente) do |f| %>
+      <% if @modulo_remitente.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@modulo_remitente.errors.count, "error") %> prohibited this modulo_remitente from being saved:</h2>
+
+            <ul>
+              <% @modulo_remitente.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+      <div class="container-fluid centrado">
+        <div class="row">
+          <div class="spamlol">
+            <div class="field">
+              <%= f.label :nombre %><br>
+              <%= f.text_field :nombre %>
+            </div>
+            <div class="field">
+              <%= f.label :nombre_entidad %><br>
+              <%= f.text_field :nombre_entidad %>
+            </div>
+            <div class="field">
+              <%= f.label :tipo_entidad %><br>
+              <%= f.text_field :tipo_entidad %>
+            </div>
+          </div>
+          <div class="spamlol">
+            <div class="field">
+              <%= f.label :cargo %><br>
+              <%= f.text_field :cargo %>
+            </div>
+            <div class="field">
+              <%= f.label :ciudad %><br>
+              <%= f.text_field :ciudad %>
+            </div>
+            <div class="field">
+              <%= f.label :paciente_id %><br>
+              <%= f.text_field :paciente_id %>
+            </div>
+          </div>
+          <div class="spamlol">
+            <div class="field">
+              <%= f.label :departamento %><br>
+              <%= f.text_field :departamento %>
+            </div>
+            <div class="field">
+              <%= f.label :direccion %><br>
+              <%= f.text_field :direccion %>
+            </div>
+            <div class="field">
+              <%= f.label :telefono %><br>
+              <%= f.text_field :telefono %>
+            </div>
+          </div>
+          <div class="spamlol">
+            <div class="field">
+              <%= f.label :email %><br>
+              <%= f.text_field :email %>
+            </div>
+            <div class="field">
+              <%= f.label :fecha_solicitud %><br>
+              <%= f.text_field :fecha_solicitud %>
+            </div>
+          </div>
+          <div class="spamlol">
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,55 @@
+<div class="example">
+
+  <%= form_for(@modulo_rol) do |f| %>
+      <% if @modulo_rol.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@modulo_rol.errors.count, "error") %> prohibited this modulo_rol from being saved:</h2>
+
+            <ul>
+              <% @modulo_rol.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+      <div class="container-fluid centrado">
+        <div class="row">
+          <div class="spamlol">
+            <div class="field">
+              <%= f.label :institucion %><br>
+              <%= f.text_field :institucion %>
+            </div>
+            <div class="field">
+              <%= f.label :nivel_grado %><br>
+              <%= f.text_field :nivel_grado %>
+            </div>
+            <div class="field">
+              <%= f.label :direccion %><br>
+              <%= f.text_field :direccion %>
+            </div>
+          </div>
+          <div class="spamlol">
+            <div class="field">
+              <%= f.label :telefono %><br>
+              <%= f.text_field :telefono %>
+            </div>
+            <div class="field">
+              <%= f.label :email %><br>
+              <%= f.text_field :email %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="spamlol">
+            <div class="field">
+              <%= f.label :observaciones %><br>
+              <%= f.text_area :observaciones %>
+            </div>
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>

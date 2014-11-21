@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Paciente:</strong>
+  <%= @modulo_remitente.paciente %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @modulo_remitente.nombre %>
+</p>
+
+<p>
+  <strong>Nombre entidad:</strong>
+  <%= @modulo_remitente.nombre_entidad %>
+</p>
+
+<p>
+  <strong>Tipo entidad:</strong>
+  <%= @modulo_remitente.tipo_entidad %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @modulo_remitente.cargo %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @modulo_remitente.ciudad %>
+</p>
+
+<p>
+  <strong>Departamento:</strong>
+  <%= @modulo_remitente.departamento %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @modulo_remitente.direccion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @modulo_remitente.telefono %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @modulo_remitente.email %>
+</p>
+
+<p>
+  <strong>Fecha solicitud:</strong>
+  <%= @modulo_remitente.fecha_solicitud %>
+</p>
+
+<%= link_to 'Edit', edit_modulo_remitente_path(@modulo_remitente) %> |
+<%= link_to 'Back', modulo_remitentes_path %>

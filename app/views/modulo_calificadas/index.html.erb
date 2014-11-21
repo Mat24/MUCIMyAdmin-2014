@@ -1,0 +1,63 @@
+<h1>Listing modulo_calificadas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paciente</th>
+      <th>Nombre completo</th>
+      <th>Genero</th>
+      <th>Tipo documento</th>
+      <th>Numero identificacion</th>
+      <th>Fecha nacimiento</th>
+      <th>Edad</th>
+      <th>Lugar nacimiento</th>
+      <th>Estrato economico</th>
+      <th>Nivel ingresos</th>
+      <th>Etapa ciclo vital</th>
+      <th>Ciudad</th>
+      <th>Departamento</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Email</th>
+      <th>Nivel escolaridad</th>
+      <th>Estado civil</th>
+      <th>Afiliacion</th>
+      <th>Motivo calificacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @modulo_calificadas.each do |modulo_calificada| %>
+      <tr>
+        <td><%= modulo_calificada.paciente %></td>
+        <td><%= modulo_calificada.nombre_completo %></td>
+        <td><%= modulo_calificada.genero %></td>
+        <td><%= modulo_calificada.tipo_documento %></td>
+        <td><%= modulo_calificada.numero_identificacion %></td>
+        <td><%= modulo_calificada.fecha_nacimiento %></td>
+        <td><%= modulo_calificada.edad %></td>
+        <td><%= modulo_calificada.lugar_nacimiento %></td>
+        <td><%= modulo_calificada.estrato_economico %></td>
+        <td><%= modulo_calificada.nivel_ingresos %></td>
+        <td><%= modulo_calificada.etapa_ciclo_vital %></td>
+        <td><%= modulo_calificada.ciudad %></td>
+        <td><%= modulo_calificada.departamento %></td>
+        <td><%= modulo_calificada.direccion %></td>
+        <td><%= modulo_calificada.telefono %></td>
+        <td><%= modulo_calificada.email %></td>
+        <td><%= modulo_calificada.nivel_escolaridad %></td>
+        <td><%= modulo_calificada.estado_civil %></td>
+        <td><%= modulo_calificada.afiliacion %></td>
+        <td><%= modulo_calificada.motivo_calificacion %></td>
+        <td><%= link_to 'Show', modulo_calificada %></td>
+        <td><%= link_to 'Edit', edit_modulo_calificada_path(modulo_calificada) %></td>
+        <td><%= link_to 'Destroy', modulo_calificada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Modulo calificada', new_modulo_calificada_path %>

@@ -1,0 +1,45 @@
+<h1>Listing modulo_remitentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paciente</th>
+      <th>Nombre</th>
+      <th>Nombre entidad</th>
+      <th>Tipo entidad</th>
+      <th>Cargo</th>
+      <th>Ciudad</th>
+      <th>Departamento</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Email</th>
+      <th>Fecha solicitud</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @modulo_remitentes.each do |modulo_remitente| %>
+      <tr>
+        <td><%= modulo_remitente.paciente %></td>
+        <td><%= modulo_remitente.nombre %></td>
+        <td><%= modulo_remitente.nombre_entidad %></td>
+        <td><%= modulo_remitente.tipo_entidad %></td>
+        <td><%= modulo_remitente.cargo %></td>
+        <td><%= modulo_remitente.ciudad %></td>
+        <td><%= modulo_remitente.departamento %></td>
+        <td><%= modulo_remitente.direccion %></td>
+        <td><%= modulo_remitente.telefono %></td>
+        <td><%= modulo_remitente.email %></td>
+        <td><%= modulo_remitente.fecha_solicitud %></td>
+        <td><%= link_to 'Show', modulo_remitente %></td>
+        <td><%= link_to 'Edit', edit_modulo_remitente_path(modulo_remitente) %></td>
+        <td><%= link_to 'Destroy', modulo_remitente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Modulo remitente', new_modulo_remitente_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Paciente:</strong>
+  <%= @modulo_rol.paciente %>
+</p>
+
+<p>
+  <strong>Institucion:</strong>
+  <%= @modulo_rol.institucion %>
+</p>
+
+<p>
+  <strong>Nivel grado:</strong>
+  <%= @modulo_rol.nivel_grado %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @modulo_rol.direccion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @modulo_rol.telefono %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @modulo_rol.email %>
+</p>
+
+<p>
+  <strong>Observaciones:</strong>
+  <%= @modulo_rol.observaciones %>
+</p>
+
+<%= link_to 'Edit', edit_modulo_rol_path(@modulo_rol) %> |
+<%= link_to 'Back', modulo_rols_path %>
