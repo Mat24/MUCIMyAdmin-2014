@@ -1,5 +1,6 @@
 class RolsController < ApplicationController
   before_action :set_rol, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :xml, :json
 
   def index
     @rols = Rol.all

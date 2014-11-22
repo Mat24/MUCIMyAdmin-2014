@@ -1,4 +1,4 @@
-<h1>Listing rols</h1>
+<h1>Roles del sistema</h1>
 
 <table>
   <thead>
@@ -12,7 +12,7 @@
   <tbody>
     <% @rols.each do |rol| %>
       <tr>
-        <td><%= rol.user %></td>
+        <td><%= rol.user.email %></td>
         <td><%= rol.nombre %></td>
         <td><%= link_to 'Show', rol %></td>
         <td><%= link_to 'Edit', edit_rol_path(rol) %></td>

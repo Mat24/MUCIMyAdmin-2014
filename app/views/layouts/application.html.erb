@@ -15,29 +15,35 @@
     </div>
 
     <span class="element-divider"></span>
-    <a class="element brand" href="#"><span class="icon-spin"></span></a>
-    <a class="element brand" href="#"><span class="icon-printer"></span></a>
+    <a class="element brand" href="/rols"><span class="icon-spin"></span></a>
+    <a class="element brand" href="/pacientes"><span class="icon-clipboard-2"></span></a>
     <span class="element-divider"></span>
-    <div class="element">
-      <%= link_to "1",new_modulo_remitente_url %>
-    </div>
-    <span class="element-divider"></span>
-    <div class="element">
-      <%= link_to "2",new_modulo_receptora_url %>
-    </div>
-    <span class="element-divider"></span>
-    <div class="element">
-      <%= link_to "3",new_modulo_calificada_url %>
-    </div>
-    <span class="element-divider"></span>
-    <div class="element">
-      <%= link_to "4",new_modulo_rol_url %>
-    </div>
-    <span class="element-divider"></span>
-    <div class="element">
-      5
-    </div>
-    <span class="element-divider"></span>
+    <% if current_user != nil %>
+
+        <% if current_user.rol != nil && current_user.rol.nombre == "Medico" %>
+
+            <div class="element">
+              <%= link_to "1",new_modulo_remitente_url %>
+            </div>
+            <span class="element-divider"></span>
+            <div class="element">
+              <%= link_to "2",new_modulo_receptora_url %>
+            </div>
+            <span class="element-divider"></span>
+            <div class="element">
+              <%= link_to "3",new_modulo_calificada_url %>
+            </div>
+            <span class="element-divider"></span>
+            <div class="element">
+              <%= link_to "4",new_modulo_rol_url %>
+            </div>
+            <span class="element-divider"></span>
+            <div class="element">
+              5
+            </div>
+            <span class="element-divider"></span>
+        <% end %>
+  <% end %>
 
     <div class="element input-element">
       <form>
